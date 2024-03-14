@@ -1,5 +1,6 @@
 import { getRandomQuote } from '../apiClient.ts'
 import { useQuery } from '@tanstack/react-query'
+import './Song&Ima.js'
 
 function Zen({ setMode }) {
 
@@ -21,8 +22,8 @@ function Zen({ setMode }) {
         <source src="https://audio.jukehost.co.uk/Sa3fJ2syKJVdIjHObgNLMy5BvCvtYDiI" type="audio/mpeg" />
       </audio>
     </div>
-    <script src="/Song&Ima.ts"></script>
-    {isError && (
+    {/* <script src="/Song&Ima.ts"></script> */}
+    {isError && (       
       <p style={{ color: 'red' }}>
         There was an error retrieving the greeting.
       </p>
