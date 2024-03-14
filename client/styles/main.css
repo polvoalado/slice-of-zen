@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#container {
+  text-align: right;
+  margin-top: 15px;
+}
+
+button {
+  margin-right: 30px;
+  font-size: xx-large
+}
+
+body {
+  background-image: url('https://wallpaperaccess.com/full/390982.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
