@@ -2,8 +2,8 @@ function fbMom({ setMode }) {
 
   return (
     <>
-    <div className=''>
-        <h2>ZenBook</h2>
+    <div className='bg-blue-500 py-5'>
+        <h2 className="pl-5 font-bold">ZenBook</h2>
       </div>
     <div className='grid grid-cols-4 pt-5'>
       <div className='pl-5'>
