@@ -13,8 +13,7 @@ const App = () => {
   } = useQuery({ queryKey: ['zenQuote'], queryFn: getRandomQuote })
 
 
-  if (isPending) return <p>Loading...</p>
-
+//   if (isPending) return <p>Loading...</p>
 
   return (
     <>
