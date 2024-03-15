@@ -31,8 +31,12 @@ if (zenQuote === undefined) {
         <SongPlayer />
         <div id="SongAndImage">
         </div>
-        <h1 className="text-3xl font-bold underline">{zenQuote[0].q}</h1>
-        <button onClick={() => setMode('fbMom')}>wine time 🍷</button>
+        <h1 className="animate-pulse text-center text-3xl font-bold pm-10 bg-white opacity-70">{zenQuote[0].q}</h1>
+        <button className="bg-slate-400 rounded-2xl pt-2 border-black border-2" onClick={() => setMode('fbMom')}>wine time 🍷</button>
+        <div className="statue">
+          <img className='justify-self-center z-0' src="https://s9.gifyu.com/images/SUCzB.gif" />
+        </div>
+
       </div>
     </>}
     </>
