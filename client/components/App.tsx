@@ -1,10 +1,14 @@
 import { useState } from 'react'
+import FbMom from './FbMom.tsx'
+import Zen from './Zen.tsx'
+import React from 'react'
+import SongPlayer from './Song&Ima.tsx'
 import { getRandomQuote } from '../apiClient.ts'
 import { useQuery } from '@tanstack/react-query'
-import FbMom from './FbMom.tsx'
 
-const App = () => {
+const App: React.FC = () => {
   const [mode, setMode] = useState('zen')
+  // const [showQuote, setShowQuote] = 
 
   const {
     data: zenQuote,
@@ -12,9 +16,9 @@ const App = () => {
     isPending,
   } = useQuery({ queryKey: ['zenQuote'], queryFn: getRandomQuote })
 
-
-//   if (isPending) return <p>Loading...</p>
-
+if (zenQuote === undefined) {
+  return <p>loading...</p>
+}
   return (
     <>
       {mode === 'fbMom' ? 
@@ -23,19 +27,17 @@ const App = () => {
     </>
     :
     <>
-    <h1 className="text-3xl font-bold underline">{zenQuote[0].q}</h1>
-    <button onClick={() => setMode('fbMom')}>wine time 🍷</button>
-    </>
-    }
-
-{isError && (
-      <p style={{ color: 'red' }}>
-        There was an error retrieving the greeting.
-      </p>
-    )}
-
+      <div className="App">
+        <SongPlayer />
+        <div id="SongAndImage">
+        </div>
+        <h1 className="text-3xl font-bold underline">{zenQuote[0].q}</h1>
+        <button onClick={() => setMode('fbMom')}>wine time 🍷</button>
+      </div>
+    </>}
     </>
   )
+
 }
 
 export default App
