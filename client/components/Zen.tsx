@@ -13,7 +13,7 @@ function Zen({ setMode }) {
     return (
       <>
 <h1 className="text-3xl font-bold underline">{zenQuote[0].q}</h1>
-    <button onClick={() => setMode('fbMom')}>wine time 🍷</button>
+    
     {/* <script src="../index.tsx" type="module"></script> */}
     <div>
       <button id="playButton">⏸️</button>
