@@ -23,11 +23,14 @@ if (zenQuote === undefined) {
     <>
       {mode === 'fbMom' ? 
       <>
-      <FbMom setMode={setMode}/>
+      <div className="App bg-white pb-96">
+       <FbMom setMode={setMode}/>
+      </div>
     </>
     :
     <>
       <div className="App">
+        <div>
         <SongPlayer />
         <div id="SongAndImage">
         </div>
@@ -36,7 +39,7 @@ if (zenQuote === undefined) {
         <div className="statue">
           <img className='justify-self-center z-0' src="https://s9.gifyu.com/images/SUCzB.gif" />
         </div>
-
+        </div>
       </div>
     </>}
     </>

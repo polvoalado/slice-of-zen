@@ -2,8 +2,9 @@ function fbMom({ setMode }) {
 
   return (
     <>
-    <div className='bg-blue-500 py-5'>
+    <div className='grid bg-blue-500 py-5'>
         <h2 className="pl-5 font-bold">ZenBook</h2>
+        <button className="hover:animate-bounce ml-4 justify-self-center mt-auto py-2 w-45 rounded-2xl bg-blue-400 border-2 border-white hover:opacity-75" onClick={() => setMode('zen')}>zen out 🪷</button>
       </div>
     <div className='grid grid-cols-4 pt-5'>
       <div className='pl-5'>
@@ -32,7 +33,6 @@ function fbMom({ setMode }) {
         <p>🧙‍♂️ Joseph</p>
         <p>💂‍♀️ Shrena</p>
       </div>
-    <button onClick={() => setMode('zen')}>zen out 🪷</button>
     </div>
     </>
   )
