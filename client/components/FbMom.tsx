@@ -4,10 +4,13 @@ import { useState } from "react"
 function fbMom({ setMode }) {
 
   const [momImageNum, setMomImageNum] = useState(1)
+  const [refreshFlag, setRefreshFlag] = useState(false)
 
-  const handleRefresh = () => {
-    setMomImageNum(Math.random())
-  }
+  // const handleRefresh = () => {
+  //   setMomImageNum(Math.random())
+  //   setRefreshFlag(!refreshFlag)
+  //   console.log(refreshFlag)
+  // }
 
 
     
@@ -33,7 +36,7 @@ function fbMom({ setMode }) {
         <p>♾️ Zen Quest</p>
         <p>🔻 See more</p>
       </div>
-      <Momimage key={momImageNum} />
+      <Momimage key={momImageNum} zenImg={zenImg} />
     <div className='pr-5 w-15'>
         <p className="font-bold">Contacts</p>
         <p>🤵 David</p>
@@ -45,7 +48,7 @@ function fbMom({ setMode }) {
         <p>🧙‍♂️ Joseph</p>
         <p>💂‍♀️ Shrena</p>
       </div>
-      <button onClick={handleRefresh}>refresh</button>
+      {/* <button onClick={handleRefresh}>refresh</button> */}
 
       </div>
     </>
